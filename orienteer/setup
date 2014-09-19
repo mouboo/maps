@@ -1,0 +1,18 @@
+Setup for Orienteer
+
+- osm data from web api
+
+- osm2pgsql
+
+- tilemill
+
+Add layers, example for planet_osm_line:
+id: line
+connection: host=localhost port=5432 user=gisuser dbname=gis
+table or subquery: (select * from planet_osm_line) as line
+
+($ psql -U postgres -d gis -c "\d")
+planet_osm_polygon
+planet_osm_line
+planet_osm_point
+

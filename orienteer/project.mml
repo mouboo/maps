@@ -1,37 +1,118 @@
 {
   "bounds": [
-    -180,
-    -85.05112877980659,
-    180,
-    85.05112877980659
+    15.8825,
+    57.0753,
+    16.2278,
+    57.2499
   ],
   "center": [
-    0,
-    0,
-    2
+    16.0266,
+    57.1726,
+    11
   ],
   "format": "png8",
   "interactivity": false,
-  "minzoom": 0,
-  "maxzoom": 22,
+  "minzoom": 4,
+  "maxzoom": 17,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"
   ],
   "Layer": [
     {
-      "id": "countries",
-      "name": "countries",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "geometry": "polygon",
+      "extent": [
+        15.508202361489015,
+        57.02591236208283,
+        16.3406408620575,
+        57.293400648361676
+      ],
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
-        "type": "shape"
-      }
+        "type": "postgis",
+        "table": "(select * from planet_osm_polygon) as polygon",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "1726365.19,7765416.78,1819031.82,7820325.17",
+        "host": "localhost",
+        "port": "5432",
+        "user": "gisuser",
+        "dbname": "gis",
+        "id": "nodes",
+        "project": "orienteer",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "polygon",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "polygon"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        15.527745659652679,
+        56.79801609027615,
+        16.655169339959194,
+        57.46735308965798
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line) as line",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "1728540.74,7718946.48,1854044.97,7856247.64",
+        "host": "localhost",
+        "port": "5432",
+        "user": "gisuser",
+        "dbname": "gis",
+        "id": "line",
+        "project": "orienteer",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "line",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "line"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        15.762951730156749,
+        56.79801609027615,
+        16.178621885223574,
+        57.24326375334105
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point) as point",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "1754723.76,7718946.48,1800995.95,7810003.07",
+        "host": "localhost",
+        "port": "5432",
+        "user": "gisuser",
+        "dbname": "gis",
+        "id": "point",
+        "project": "orienteer",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "point",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "point"
     }
   ],
   "scale": 1,
   "metatile": 2,
   "name": "orienteer",
-  "description": "Inspired by orienteering maps"
+  "description": "Inspired by orienteering maps",
+  "attribution": ""
 }
