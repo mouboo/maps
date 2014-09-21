@@ -6,9 +6,9 @@
     57.2499
   ],
   "center": [
-    16.0266,
-    57.1726,
-    11
+    16.0264,
+    57.173,
+    16
   ],
   "format": "png8",
   "interactivity": false,
@@ -16,7 +16,12 @@
   "maxzoom": 17,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
-    "style.mss"
+    "style.mss",
+    "land_forms.mss",
+    "rock.mss",
+    "water.mss",
+    "vegetation.mss",
+    "man-made.mss"
   ],
   "Layer": [
     {
