@@ -4,6 +4,8 @@ Setup for Orienteer
 
 - osm2pgsql
 
+$ osm2pgsql --database gis -U gisuser --slim --style ./default.style --multi-geometry --keep-coastlines file.osm
+
 - tilemill
 
 Add layers, example for planet_osm_line:
