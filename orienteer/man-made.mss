@@ -45,7 +45,7 @@
 // 506 Footpath
 #line
 {
-	[highway = 'footpath'],
+	[highway = 'footway'],
     [highway = 'cycleway']
     {
       	line-width: 2;

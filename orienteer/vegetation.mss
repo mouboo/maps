@@ -7,7 +7,6 @@
     [landuse = 'meadow'],
     [landuse = 'farmland']
     {
-    	line-width:0;
     	polygon-opacity:1;
     	polygon-fill: @open_land;
     }
@@ -19,7 +18,6 @@
 {
     [landuse = 'forest']
     {
-    	line-width:0;
     	polygon-opacity:1;
     	polygon-fill: #fff;
     }

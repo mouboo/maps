@@ -9,6 +9,8 @@
 @paved:#e7a86b;
 @settlement: #75ae2c;
 
+line-width: 0;
+
 // Technical symbols - 6xx
 
 /*  
@@ -20,4 +22,5 @@
     marker-allow-overlap:true;
     marker-ignore-placement:true;
 }
+
 */

@@ -1,7 +1,7 @@
 // Water and marsh - 3xx
 
 // 301 Lake
-#polygon
+#water
 {
 	[water="lake"],
     [water="pond"],
@@ -14,7 +14,7 @@
 }
 
 // 304 Uncrossable river
-#polygon
+#water
 {
 	[waterway="riverbank"]
     {

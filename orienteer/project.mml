@@ -43,7 +43,7 @@
         "port": "5432",
         "user": "gisuser",
         "dbname": "gis",
-        "id": "nodes",
+        "id": "polygon",
         "project": "orienteer",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -53,6 +53,36 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "polygon"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        15.719622031416415,
+        57.08186808410068,
+        16.223467760500444,
+        57.293400648361676
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT * FROM planet_osm_polygon WHERE waterway IS NOT NULL OR water IS NOT NULL) as water",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "1749900.32,7776870.24,1805988.17,7820325.17",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "gisuser",
+        "id": "water",
+        "project": "orienteer",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "water",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water"
     },
     {
       "geometry": "linestring",
